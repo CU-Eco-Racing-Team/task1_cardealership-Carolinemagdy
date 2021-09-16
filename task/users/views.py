@@ -9,11 +9,6 @@ from rest_framework import status
 from rest_framework.response import Response
 # Create your views here.
 
-# content_type = ContentType.objects.get_for_model(User)
-# permission = Permission.objects.get(content_type=content_type, codename='can_buy_a_car')
-# dealer.user_permissions.add(permission,permission)
-
-
 @api_view(['POST', 'DELETE'])
 @permission_classes((IsAuthenticated,IsOwner))
 def can_sign_a_contract_permission(request, id): 
